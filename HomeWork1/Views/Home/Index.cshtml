@@ -1,0 +1,241 @@
+﻿@model HomeItems
+
+@{
+    ViewData["Title"] = "Home Page";   
+}
+
+<style>
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.text-center {
+  position: relative;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.main-text{
+  font-size: 30px;
+  position: absolute;
+  top: 15%;
+  font-family: sans-serif;
+  left: 45%;/*
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
+  text-align: right;
+  opacity: 1;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 23%;
+    left: 45%;
+    opacity: 1;
+        text-align: right;
+    font-family: sans-serif;
+    margin: 0 auto 0 auto;
+    padding: 40px;
+}
+/*
+.overlay > *{
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.overlay:hover > * {
+    transform: translateY(0px);   
+}*/
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  text-align: center;
+}
+</style>
+
+
+@*
+<div>
+    
+    <style type="text/css"> 
+  button[name="run_script"] { 
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  button[name="run_script"]:hover { 
+    background: #525174;
+  } 
+</style>
+<button type="button" name="run_script"> 
+    </button>
+</div>*@
+@*
+
+<div class="text-center">
+        <img  src="~/images/Header.png" alt="Snow" style="width:100%;">
+        <h4 >Добро пожаловать!</h4>
+</div>
+
+
+<div class="container">
+  <img src="~/images/order-art.png" class="image">
+  <div class="main-text" style="left: 55%;"><h1>@Model?.CatalogArt.Count</h1></div>
+  <div class="overlay">
+      
+      
+      
+        <p align="justify" style="width:400px;">
+            Прежде чем заказывать арт, вам стоит определиться с жанром и типом рисунка. 
+            Цена будет зависеть от таких факторов как размер, необходимая детализация и стилизация. При онлайн-оплате заказа 
+            сразу предоставляется скидка на последующие покупки.      
+        </p>
+  </div>
+</div>
+
+<div class="container">
+  <img src="~/images/order-model.png" class="image">
+  <div class="main-text"><h1 >ЗАКАЗАТЬ 2D-МОДЕЛЬ</h1></div>
+  <div class="overlay">
+        <p align="justify" style="width:400px; height: 15px;">
+            Заказ модели возможен только при свободных позициях на сайте. Также возможно выполнение только
+            определенной части работы как например отрисовка модели для анимации, разбитие модели на слои
+            или анимация уже готовой модели.
+        </p>
+  </div>
+</div>
+
+<div class="container">
+  <img src="~/images/comics.png" class="image">
+  <div class="main-text" style="left: 60%;"><h1>КОМИКСЫ</h1></div>
+  <div class="overlay">
+        <p align="justify" style="width:400px; height: 15px;">
+            Вы можете посмотреть готовые страницы комикосов, перейдя по ссылке. 
+        </p>
+  </div>
+</div>
+
+
+<div class="container">
+  <img src="~/images/characters.png" class="image">
+  <div class="main-text" style="left: 55%;"><h1 >ПЕРСОНАЖИ</h1></div>
+  <div class="overlay">
+        <p align="justify" style="width:400px; height: 15px;">
+            Полный список и характеристика персонажей. Все персонажи являются
+            оригинальными и существуют в рамках историй. 
+        </p>
+  </div>
+</div>
+
+*@
+
+        <div class="text-center">
+                <img  src="~/images/Header.png" alt="Snow" style="width:100%;">
+                <h4 >Добро пожаловать!</h4>
+        </div>
+
+
+<div class="container456">
+  <div class="row">
+    <div class="col">
+      1 из 2
+    </div>
+    <div class="col">
+      2 из 2
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 из 3
+    </div>
+    <div class="col col-lg-6">
+         @foreach(var item in Model?.HomePage)
+         {
+
+                <div class="container">
+                 
+          <img src="~/images/@item.PictureUrl" class="image">
+          <div class="main-text" style="left: 55%;"><h1>@item.Name</h1></div>
+          <div class="overlay">
+      
+                   
+
+                <p align="justify" style="width:400px;">
+                    @item.Description   
+                </p>
+          </div>
+        </div>
+                    }
+
+@*
+        <div class="container">
+          <img src="~/images/order-art.png" class="image">
+          <div class="main-text" style="left: 55%;"><h1>ЗАКАЗАТЬ АРТ</h1></div>
+          <div class="overlay">
+      
+                   
+
+                <p align="justify" style="width:400px;">
+                    Прежде чем заказывать арт, вам стоит определиться с жанром и типом рисунка. 
+                    Цена будет зависеть от таких факторов как размер, необходимая детализация и стилизация. При онлайн-оплате заказа 
+                    сразу предоставляется скидка на последующие покупки.      
+                </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="~/images/order-model.png" class="image">
+          <div class="main-text"><h1 >ЗАКАЗАТЬ 2D-МОДЕЛЬ</h1></div>
+          <div class="overlay">
+                <p align="justify" style="width:400px; height: 15px;">
+                    Заказ модели возможен только при свободных позициях на сайте. Также возможно выполнение только
+                    определенной части работы как например отрисовка модели для анимации, разбитие модели на слои
+                    или анимация уже готовой модели.
+                </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="~/images/comics.png" class="image">
+          <div class="main-text" style="left: 60%;"><h1>КОМИКСЫ</h1></div>
+          <div class="overlay">
+                <p align="justify" style="width:400px; height: 15px;">
+                    Вы можете посмотреть готовые страницы комикосов, перейдя по ссылке. 
+                </p>
+          </div>
+        </div>
+
+
+        <div class="container">
+          <img src="~/images/characters.png" class="image">
+          <div class="main-text" style="left: 55%;"><h1 >ПЕРСОНАЖИ</h1></div>
+          <div class="overlay">
+                <p align="justify" style="width:400px; height: 15px;">
+                    Полный список и характеристика персонажей. Все персонажи являются
+                    оригинальными и существуют в рамках историй. 
+                </p>
+          </div>
+        </div>*@
+
+    </div>
+    <div class="col">
+      3 из 3
+    </div>
+  </div>
+</div>

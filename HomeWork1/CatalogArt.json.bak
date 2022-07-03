@@ -1,0 +1,31 @@
+{
+  "CatalogArt": [
+    {
+      "Id": 1,
+      "Name": "ЗАКАЗАТЬ АРТ",
+      "Price": 500,
+      "Currency": "RUB",
+      "Description": "Прежде чем заказывать арт, вам стоит определиться с жанром и типом рисунка. Цена будет зависеть от таких факторов как размер, необходимая детализация и стилизация. При онлайн-оплате заказа сразу предоставляется скидка на последующие покупки.",
+      "Time": "2 недели",
+      "PictureUrl": "~/images/order-art.png"
+    },
+    {
+      "Id": 2,
+      "Name": "2D-0238525Model",
+      "Price": 2500,
+      "Currency": "RUB",
+      "Description": "wetwegreyyy",
+      "Time": "6 недель",
+      "PictureUrl": "khsdiuhoifs.png"
+    },
+    {
+      "Id": 3,
+      "Name": "dgsreg",
+      "Price": 220,
+      "Currency": "RUB",
+      "Description": "afeatsd dfdf fdffb 0 fdd",
+      "Time": "1 неделя",
+      "PictureUrl": "ksdfewt432 0 sdg.png"
+    }
+  ]
+}

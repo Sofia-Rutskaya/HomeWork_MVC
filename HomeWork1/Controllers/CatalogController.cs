@@ -17,5 +17,10 @@ namespace HomeWork1.Controllers
             _catalogArt = catalogArt;
         }
 
+        public IActionResult GetAutorInfo()
+        {
+            var result = _catalogArt.GetHomePageInfo();
+            return View(result);
+        }
     }
 }

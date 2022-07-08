@@ -7,7 +7,7 @@
         public int Price { get; set; }
         public string? Currency { get; set; }
         public string? Description { get; set; }
-        public DateTime? Time { get; set; }
+        public string? Time { get; set; }
         public string PictureUrl { get; set; } = null!;
     }
 

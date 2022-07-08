@@ -1,60 +1,56 @@
-{
-  "PageSize": null,
-  "CurrentPage": null,
-  "TotalPages": null,
-  "CatalogArtItem": [
-    {
-      "Id": 1,
-      "Name": "1",
-      "Price": null,
-      "Currency": null,
-      "Description": "This is art!",
-      "Time": "07.05.2021",
-      "PictureUrl": ""
-    },
-    {
-      "Id": 2,
-      "Name": "2",
-      "Price": null,
-      "Currency": null,
-      "Description": "This is art!",
-      "Time": "08.11.2021",
-      "PictureUrl": ""
-    },
-    {
-      "Id": 3,
-      "Name": "3",
-      "Price": null,
-      "Currency": null,
-      "Description": "This is art!",
-      "Time": "27.04.2021",
-      "PictureUrl": ""
-    },
-    {
-      "Id": 4,
-      "Name": "4",
-      "Price": null,
-      "Currency": null,
-      "Description": "This is art!",
-      "Time": "13.05.2020",
-      "PictureUrl": ""
-    },
-    {
-      "Id": 5,
-      "Name": "5",
-      "Price": null,
-      "Currency": null,
-      "Description": "This is art!",
-      "Time": "07.05.2020",
-      "PictureUrl": ""
-    },
-    {
-      "Id": 6,
-      "Name": "6",
-      "Price": null,
-      "Currency": null,
-      "Description": "This is art!",
-      "Time": "09.09.2019",
-      "PictureUrl": ""
-    }
-}
+[
+  {
+    "Id": 1,
+    "Name": "1",
+    "Price": 0,
+    "Currency": "RUB",
+    "Description": "This is art!",
+    "Time": "07.05.2021",
+    "PictureUrl": "sdfsdf"
+  },
+  {
+    "Id": 2,
+    "Name": "2",
+    "Price": 0,
+    "Currency": "RUB",
+    "Description": "This is art!",
+    "Time": "08.11.2021",
+    "PictureUrl": "sdfd"
+  },
+  {
+    "Id": 3,
+    "Name": "3",
+    "Price": 0,
+    "Currency": "RUB",
+    "Description": "This is art!",
+    "Time": "27.04.2021",
+    "PictureUrl": "dsfsd"
+  },
+  {
+    "Id": 4,
+    "Name": "4",
+    "Price": 0,
+    "Currency": "RUB",
+    "Description": "This is art!",
+    "Time": "13.05.2020",
+    "PictureUrl": "dfsdf"
+  },
+  {
+    "Id": 5,
+    "Name": "5",
+    "Price": 0,
+    "Currency": "RUB",
+    "Description": "This is art!",
+    "Time": "07.05.2020",
+    "PictureUrl": "sdfsd"
+  },
+  {
+    "Id": 6,
+    "Name": "6",
+    "Price": 0,
+    "Currency": "RUB",
+    "Description": "This is art!",
+    "Time": "09.09.2019",
+    "PictureUrl": "vd"
+  }
+]

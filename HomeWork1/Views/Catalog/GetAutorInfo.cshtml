@@ -1,0 +1,31 @@
+﻿@model AuthorPageInfo
+@{
+    ViewData["Title"] = "About Author";   
+}
+<style>
+
+.info{
+font-size: 15px;
+font-family: sans-serif;
+opacity: 1;
+}
+</style>
+<div class="container" style="margin: auto;">
+  
+  <div class="row justify-content-center">
+    <div class="col-xs-1">
+   
+    </div>
+    <div class="col-md-8">
+       
+        <h1>ИНФОРМАЦИЯ ОБ АВТОРЕ:</h1>
+        <p align="justify" class="info">Имя: @Model.Name</p>
+        <p align="justify"  class="info">Возраст: @Model.Age</p>
+        <p align="justify" class="info">Языки, которыми владею: @Model.Languages</p>
+        <p  align="justify" class="info">@Model.Description</p>
+    </div>
+    <div class="col-xs-1">
+ 
+    </div>
+  </div>
+</div>

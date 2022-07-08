@@ -17,6 +17,24 @@
       "Name": "КОМИКСЫ",
       "Description": "afeatsd dfdf fdffb 0 fdd",    
       "PictureUrl": "comics.png"
+    },
+    {
+      "Id": 4,
+      "Name": "ПЕРСОНАЖИ",
+      "Description": "Полный список и характеристика персонажей. Все персонажи являются, оригинальными и существуют в рамках историй.",
+      "PictureUrl": "characters.png"
+    },
+    {
+      "Id": 5,
+      "Name": "ТУТОРИАЛЫ",
+      "Description": "Здесь содержаться туториалы в бесплатном доступе.",
+      "PictureUrl": "tutorial.png"
+    },
+    {
+      "Id": 6,
+      "Name": "ИЛЛЮСТРАЦИИ",
+      "Description": "Здесь содержаться все иллюстрации.",
+      "PictureUrl": "allartworks.png"
     }
   ]
 }

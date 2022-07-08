@@ -1,4 +1,4 @@
-﻿namespace HomeWork1.Models
+﻿namespace HomeWork1.ViewModels
 {
     public class HomeItems
     {

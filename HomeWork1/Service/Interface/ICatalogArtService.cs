@@ -1,9 +1,12 @@
-﻿using HomeWork1.Models;
+﻿using HomeWork1.ViewModels;
+using HomeWork1.ViewModels;
 
 namespace HomeWork1.Service.Interface
 {
     public interface ICatalogArtService
     {
-        public HomeItems? GetHomePageInfo();
+        Task<HomeItems?> GetHomePageInfo();
+        Task<AuthorPageInfo?> GetAuthorDesc();
+        Task<List<CatalogArtItem>?> GetPagesInfo(int pageSize, int pageNums);
     }
 }

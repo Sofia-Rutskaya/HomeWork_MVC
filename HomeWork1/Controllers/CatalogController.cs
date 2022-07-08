@@ -1,7 +1,11 @@
-﻿using HomeWork1.Models;
+﻿using HomeWork1.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using HomeWork1.Service.Interface;
+using Microsoft.AspNetCore;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Collections.Generic;
 
 namespace HomeWork1.Controllers
 {
@@ -17,10 +21,19 @@ namespace HomeWork1.Controllers
             _catalogArt = catalogArt;
         }
 
-        public IActionResult GetAutorInfo()
+        public async Task<IActionResult> GetAutorInfo()
         {
-            var result = _catalogArt.GetHomePageInfo();
+            var result = await _catalogArt.GetAuthorDesc();
             return View(result);
+        }
+
+        public async Task<IActionResult> Pagination(int? pageNumber)
+        {
+            int pageSize = 3;
+            int pageNums = pageNumber == null ? 0 : pageNumber.Value;
+            var item = await  _catalogArt.GetPagesInfo(pageSize, pageNums);
+          
+            return View(await PaginationList<CatalogArtItem>.CreateAsync(item.AsQueryable(), pageNumber ?? 1, pageSize));            
         }
     }
 }

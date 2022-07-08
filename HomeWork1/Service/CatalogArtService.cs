@@ -1,6 +1,11 @@
 ﻿using HomeWork1.Service.Interface;
 using Newtonsoft.Json;
-using HomeWork1.Models;
+using HomeWork1.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace HomeWork1.Service
 {
@@ -12,13 +17,36 @@ namespace HomeWork1.Service
             _logger = logger;
         }
 
-
-        public HomeItems? GetHomePageInfo()
+        public async Task<List<CatalogArtItem>?> GetPagesInfo(int pageSize, int pageNums)
         {
-            var config = File.ReadAllText("CatalogArt.json");
+            var config = await File.ReadAllTextAsync("CatalogIllustrations.json");
+            var items = JsonConvert.DeserializeObject<List<CatalogArtItem>>(config);
+
+            return items;
+        }
+        public async Task<HomeItems?> GetHomePageInfo()
+        {
+            var config = await File.ReadAllTextAsync("HomePage.json");
             var result = JsonConvert.DeserializeObject<HomeItems>(config);
 
             return result;
         }
+
+        public async Task<AuthorPageInfo?> GetAuthorDesc()
+        {
+            var config = await File.ReadAllTextAsync("AutorPage.json");
+            var result = JsonConvert.DeserializeObject<AuthorInfo>(config);
+            return new AuthorPageInfo()
+            {
+                Name = result.Name,
+                Age = result.Age,
+                Languages = result.Languages,
+                Description = "Мой любимый цвет - " + result.FavColor
+                + ". Вещи которые мне нравятся: " + result.Like
+                + " и вещи, которые мне не нравятся: " + result.NotLike + " " + result.Description + "."
+            };
+        }
+
+      
     }
 }

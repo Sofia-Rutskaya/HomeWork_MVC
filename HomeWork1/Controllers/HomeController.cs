@@ -1,4 +1,4 @@
-﻿using HomeWork1.Models;
+﻿using HomeWork1.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using HomeWork1.Service.Interface;
@@ -16,9 +16,9 @@ namespace HomeWork1.Controllers
             _logger = logger;
             _catalogArt = catalogArt;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var result = _catalogArt.GetHomePageInfo();
+            var result = await _catalogArt.GetHomePageInfo();
             return View(result);
         }
 

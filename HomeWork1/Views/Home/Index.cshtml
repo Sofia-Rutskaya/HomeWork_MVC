@@ -1,4 +1,4 @@
-﻿@model HomeItems
+﻿@model HomeItems;
 
 @{
     ViewData["Title"] = "Home Page";   
@@ -47,17 +47,7 @@
     margin: 0 auto 0 auto;
     padding: 15px;
 }
-/*
-.overlay > *{
-    transform: translateY(20px);
-    transition: transform 0.25s;
-}
-.overlay:hover{
-    opacity: 1;
-}
-.overlay:hover > * {
-    transform: translateY(0px);   
-}*/
+
 .text {
   color: white;
   font-size: 20px;
@@ -67,83 +57,6 @@
   text-align: center;
 }
 </style>
-
-
-@*
-<div>
-    
-    <style type="text/css"> 
-  button[name="run_script"] { 
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  button[name="run_script"]:hover { 
-    background: #525174;
-  } 
-</style>
-<button type="button" name="run_script"> 
-    </button>
-</div>*@
-@*
-
-<div class="text-center">
-        <img  src="~/images/Header.png" alt="Snow" style="width:100%;">
-        <h4 >Добро пожаловать!</h4>
-</div>
-
-
-<div class="container">
-  <img src="~/images/order-art.png" class="image">
-  <div class="main-text" style="left: 55%;"><h1>@Model?.CatalogArt.Count</h1></div>
-  <div class="overlay">
-      
-      
-      
-        <p align="justify" style="width:400px;">
-            Прежде чем заказывать арт, вам стоит определиться с жанром и типом рисунка. 
-            Цена будет зависеть от таких факторов как размер, необходимая детализация и стилизация. При онлайн-оплате заказа 
-            сразу предоставляется скидка на последующие покупки.      
-        </p>
-  </div>
-</div>
-
-<div class="container">
-  <img src="~/images/order-model.png" class="image">
-  <div class="main-text"><h1 >ЗАКАЗАТЬ 2D-МОДЕЛЬ</h1></div>
-  <div class="overlay">
-        <p align="justify" style="width:400px; height: 15px;">
-            Заказ модели возможен только при свободных позициях на сайте. Также возможно выполнение только
-            определенной части работы как например отрисовка модели для анимации, разбитие модели на слои
-            или анимация уже готовой модели.
-        </p>
-  </div>
-</div>
-
-<div class="container">
-  <img src="~/images/comics.png" class="image">
-  <div class="main-text" style="left: 60%;"><h1>КОМИКСЫ</h1></div>
-  <div class="overlay">
-        <p align="justify" style="width:400px; height: 15px;">
-            Вы можете посмотреть готовые страницы комикосов, перейдя по ссылке. 
-        </p>
-  </div>
-</div>
-
-
-<div class="container">
-  <img src="~/images/characters.png" class="image">
-  <div class="main-text" style="left: 55%;"><h1 >ПЕРСОНАЖИ</h1></div>
-  <div class="overlay">
-        <p align="justify" style="width:400px; height: 15px;">
-            Полный список и характеристика персонажей. Все персонажи являются
-            оригинальными и существуют в рамках историй. 
-        </p>
-  </div>
-</div>
-
-*@
 
         <div class="text-center">
                 <img  src="~/images/Header.png" alt="Snow" style="width:100%;">
@@ -158,7 +71,7 @@
    
     </div>
     <div class="col-md-8">
-         @foreach(var item in Model?.HomePage)
+         @foreach(var item in Model.HomePage)
          {
              <pre>
              </pre>
@@ -173,58 +86,7 @@
                 </p>
           </div>
         </div>
-                    }
-
-@*
-        <div class="container">
-          <img src="~/images/order-art.png" class="image">
-          <div class="main-text" style="left: 55%;"><h1>ЗАКАЗАТЬ АРТ</h1></div>
-          <div class="overlay">
-      
-                   
-
-                <p align="justify" style="width:400px;">
-                    Прежде чем заказывать арт, вам стоит определиться с жанром и типом рисунка. 
-                    Цена будет зависеть от таких факторов как размер, необходимая детализация и стилизация. При онлайн-оплате заказа 
-                    сразу предоставляется скидка на последующие покупки.      
-                </p>
-          </div>
-        </div>
-
-        <div class="container">
-          <img src="~/images/order-model.png" class="image">
-          <div class="main-text"><h1 >ЗАКАЗАТЬ 2D-МОДЕЛЬ</h1></div>
-          <div class="overlay">
-                <p align="justify" style="width:400px; height: 15px;">
-                    Заказ модели возможен только при свободных позициях на сайте. Также возможно выполнение только
-                    определенной части работы как например отрисовка модели для анимации, разбитие модели на слои
-                    или анимация уже готовой модели.
-                </p>
-          </div>
-        </div>
-
-        <div class="container">
-          <img src="~/images/comics.png" class="image">
-          <div class="main-text" style="left: 60%;"><h1>КОМИКСЫ</h1></div>
-          <div class="overlay">
-                <p align="justify" style="width:400px; height: 15px;">
-                    Вы можете посмотреть готовые страницы комикосов, перейдя по ссылке. 
-                </p>
-          </div>
-        </div>
-
-
-        <div class="container">
-          <img src="~/images/characters.png" class="image">
-          <div class="main-text" style="left: 55%;"><h1 >ПЕРСОНАЖИ</h1></div>
-          <div class="overlay">
-                <p align="justify" style="width:400px; height: 15px;">
-                    Полный список и характеристика персонажей. Все персонажи являются
-                    оригинальными и существуют в рамках историй. 
-                </p>
-          </div>
-        </div>*@
-
+          }
     </div>
     <div class="col-xs-1">
  

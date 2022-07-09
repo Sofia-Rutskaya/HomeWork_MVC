@@ -1,0 +1,49 @@
+﻿
+@model HomeWork1.ViewModels.PaginationList<HomeWork1.ViewModels.CatalogArtItem>;
+@{
+    ViewData["Title"] = "Home Page";   
+}
+	<style>
+    .ItemCatalog{
+        font-family: sans-serif;
+        font-size: 20px;
+        text-align:justify;
+        margin:auto;
+        line-height: 1;
+    }
+
+
+    </style>
+      
+<div style="align-content: center;">   
+  <partial name="_pagination"  />
+</div>
+
+ <div class="container-fluid" style="margin: auto;">  
+<div class="row justify-content-center"> 
+ 
+   <div class="col-xs-1">
+     </div>
+              <div class="col-md-8">
+        
+        @foreach (var item in @Model)
+        {
+            <div class="ItemCatalog">
+                <img  src="~/illustrations/@item.PictureUrl"  style="width:100%;">
+                <p>@item.Name</p>
+                <p>@item.Description</p>
+                <p>@item.Time</p> 
+                <pre>
+                </pre>
+            </div>              
+        }
+              </div>
+              <div class="col-xs-1">               
+              </div>
+              
+  
+  </div>
+</div>
+<div style="align-content: center;">   
+  <partial name="_pagination"  />
+</div>

@@ -29,8 +29,10 @@ namespace HomeWork1.Controllers
             return View(result);
         }
 
-        public async Task<IActionResult> Pagination(int? pageNumber)
+
+        public async Task<IActionResult> Illustrations(int? pageNumber)
         {
+            if (pageNumber < 0) pageNumber = 0;
             int pageSize = 3;
             int pageNums = pageNumber == null ? 1 : 0;
             var item = await _catalogArt.GetPagesInfo(pageSize, pageNums);

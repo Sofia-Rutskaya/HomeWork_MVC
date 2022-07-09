@@ -1,0 +1,16 @@
+﻿@model HomeWork1.ViewModels.PaginationList<CatalogArtItem>
+
+<a
+    asp-controller="Catalog"
+    asp-action="IllustrationCatalog"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-default @Model.PreviousPage">
+        Previous
+    </a>
+    <a
+    asp-controller="Catalog"
+    asp-action="IllustrationCatalog"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-default @Model.NextPage">
+        Next
+    </a>

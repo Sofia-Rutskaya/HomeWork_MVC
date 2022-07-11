@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "Title": "Minecraft",
+    "Description": [
+      {
+        "Info": "Страница 1.",
+        "PictureUrl": "2_1.png"
+      },
+      {
+        "Info": "Страница 2.",
+        "PictureUrl": "2_2.png"
+      },
+      {
+        "Info": "Страница 3.",
+        "PictureUrl": "2_3.png"
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Title": "Dialog",
+    "Description": [
+      {
+        "Info": "Страница 1.",
+        "PictureUrl": "3_1.png"
+      },
+      {
+        "Info": "Страница 2.",
+        "PictureUrl": "3_2.png"
+      },
+      {
+        "Info": "Страница 3.",
+        "PictureUrl": "3_3.png"
+      },
+      {
+        "Info": "Страница 4.",
+        "PictureUrl": "3_4.png"
+      }
+    ]
+  }
+]

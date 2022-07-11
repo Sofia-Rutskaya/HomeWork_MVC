@@ -8,7 +8,9 @@ namespace HomeWork1.Service.Interface
         Task<HomeItems?> GetHomePageInfo();
         Task<AuthorPageInfo?> GetAuthorDesc();
         Task<List<CatalogArtItem>?> GetPagesInfo();
-        Task<List<CatalogTutorial>?> GetTutorial();
+        Task<List<UniversalCatalog>?> GetTutorial();
+
+        Task<List<UniversalCatalog>?> GetComics();
 
     }
 }

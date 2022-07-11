@@ -1,6 +1,6 @@
 ﻿namespace HomeWork1.ViewModels
 {
-    public class CatalogTutorial
+    public class UniversalCatalog
     {
         public int Id { get; set; }
         public string? Title { get; set; }

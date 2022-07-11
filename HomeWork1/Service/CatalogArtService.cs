@@ -25,10 +25,18 @@ namespace HomeWork1.Service
             return items;
         }
 
-        public async Task<List<CatalogTutorial>?> GetTutorial()
+        public async Task<List<UniversalCatalog>?> GetTutorial()
         {
             var config = await File.ReadAllTextAsync("Tutorial.json");
-            var items = JsonConvert.DeserializeObject<List<CatalogTutorial>>(config);
+            var items = JsonConvert.DeserializeObject<List<UniversalCatalog>>(config);
+
+            return items;
+        }
+        
+        public async Task<List<UniversalCatalog>?> GetComics()
+        {
+            var config = await File.ReadAllTextAsync("Comics.json");
+            var items = JsonConvert.DeserializeObject<List<UniversalCatalog>>(config);
 
             return items;
         }

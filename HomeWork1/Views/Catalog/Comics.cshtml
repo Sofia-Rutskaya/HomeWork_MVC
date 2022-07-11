@@ -2,7 +2,7 @@
 
 
     @{
-    ViewData["Title"] = "Tutorials";   
+    ViewData["Title"] = "Comics";   
 }
 	<style>
     .ItemCatalog{
@@ -16,21 +16,6 @@
 
     </style>
       
-
-<a
-    asp-controller="Catalog"
-    asp-action="Tutorial"
-       asp-route-pageNumber="@(Model.PageIndex - 1)"
-       class="btn btn-default @Model.PreviousPage">
-        Previous
-    </a>
-    <a
-    asp-controller="Catalog"
-    asp-action="Tutorial"
-       asp-route-pageNumber="@(Model.PageIndex + 1)"
-       class="btn btn-default @Model.NextPage">
-        Next
-    </a>
 
 <div style="align-content: center;">   
 </div>
@@ -49,16 +34,10 @@
                     </div>
                     @foreach ( var sth in item.Description)
                     {          
-                        <div class="ItemCatalog">               
-                        <p>@sth.Info</p>
-                        </div>
-                        <pre>
-
-                        </pre>
-                         <div class="ItemCatalog">
+                        <div class="ItemCatalog">                               
                         <img  src="~/illustrations/@sth.PictureUrl"  style="width:100%;">
                         </div>
-                    }                   
+                     }                   
                     
       
             <pre>
@@ -75,17 +54,18 @@
 <div style="align-content: center;">  
 </div>
 
-
-<a
+    <a
     asp-controller="Catalog"
-    asp-action="Tutorial"
+    asp-action="Comics"
        asp-route-pageNumber="@(Model.PageIndex - 1)"
        class="btn btn-default @Model.PreviousPage">
         Previous
     </a>
+
+
     <a
     asp-controller="Catalog"
-    asp-action="Tutorial"
+    asp-action="Comics"
        asp-route-pageNumber="@(Model.PageIndex + 1)"
        class="btn btn-default @Model.NextPage">
         Next

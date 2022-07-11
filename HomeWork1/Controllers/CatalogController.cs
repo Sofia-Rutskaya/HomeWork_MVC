@@ -35,7 +35,7 @@ namespace HomeWork1.Controllers
             if (pageNumber < 0) pageNumber = 0;
             int pageSize = 3;
             int pageNums = pageNumber == null ? 1 : 0;
-            var item = await _catalogArt.GetPagesInfo(pageSize, pageNums);
+            var item = await _catalogArt.GetPagesInfo();
             var result = await PaginationList<CatalogArtItem>.CreateAsync(item, pageNumber ?? 1, pageSize);
             result.NextPage = (result.PageIndex == result.TotalPages - 1) ? "is-disabled" : string.Empty;
             result.PreviousPage = (result.PageIndex == 0) ? "is-disabled" : string.Empty;
@@ -44,6 +44,19 @@ namespace HomeWork1.Controllers
             //vm.PaginationInfo.Previous = (vm.PaginationInfo.ActualPage == 0) ? "is-disabled" : string.Empty;
 
             return View(result);            
+        }
+
+        public async Task<IActionResult> Tutorial(int? pageNumber)
+        {
+            if (pageNumber < 0) pageNumber = 0;
+            int pageSize = 1;
+            int pageNums = pageNumber == null ? 1 : 0;
+            var item = await _catalogArt.GetTutorial();
+            var result = await PaginationList<CatalogTutorial>.CreateAsync(item, pageNumber ?? 1, pageSize);
+            result.NextPage = (result.PageIndex == result.TotalPages - 1) ? "is-disabled" : string.Empty;
+            result.PreviousPage = (result.PageIndex == 0) ? "is-disabled" : string.Empty;
+            return View(result);
+
         }
     }
 }

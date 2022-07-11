@@ -1,0 +1,92 @@
+﻿@model HomeWork1.ViewModels.PaginationList<CatalogTutorial>
+
+
+    @{
+    ViewData["Title"] = "Tutorials";   
+}
+	<style>
+    .ItemCatalog{
+        font-family: sans-serif;
+        font-size: 20px;
+        text-align:justify;
+        margin:auto;
+        line-height: 1;
+    }
+
+
+    </style>
+      
+
+<a
+    asp-controller="Catalog"
+    asp-action="Tutorial"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-default @Model.PreviousPage">
+        Previous
+    </a>
+    <a
+    asp-controller="Catalog"
+    asp-action="Tutorial"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-default @Model.NextPage">
+        Next
+    </a>
+
+<div style="align-content: center;">   
+</div>
+
+ <div class="container-fluid" style="margin: auto;">  
+<div class="row justify-content-center"> 
+ 
+   <div class="col-xs-1">
+     </div>
+              <div class="col-md-8">
+        
+        @foreach (var item in @Model)
+        {
+            <div class="ItemCatalog">
+                <p>@item.Title</p>
+                    </div>
+                    @foreach ( var sth in item.Description)
+                    {          
+                        <div class="ItemCatalog">               
+                        <p>@sth.Info</p>
+                        </div>
+                        <pre>
+
+                        </pre>
+                         <div class="ItemCatalog">
+                        <img  src="~/illustrations/@sth.PictureUrl"  style="width:100%;">
+                        </div>
+                    }                   
+                    
+      
+            <pre>
+
+            </pre>
+        }
+              </div>
+              <div class="col-xs-1">               
+              </div>
+              
+  
+  </div>
+</div>
+<div style="align-content: center;">  
+</div>
+
+
+<a
+    asp-controller="Catalog"
+    asp-action="Tutorial"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       class="btn btn-default @Model.PreviousPage">
+        Previous
+    </a>
+    <a
+    asp-controller="Catalog"
+    asp-action="Tutorial"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       class="btn btn-default @Model.NextPage">
+        Next
+    </a>

@@ -17,13 +17,22 @@ namespace HomeWork1.Service
             _logger = logger;
         }
 
-        public async Task<List<CatalogArtItem>?> GetPagesInfo(int pageSize, int pageNums)
+        public async Task<List<CatalogArtItem>?> GetPagesInfo()
         {
             var config = await File.ReadAllTextAsync("CatalogIllustrations.json");
             var items = JsonConvert.DeserializeObject<List<CatalogArtItem>>(config);
 
             return items;
         }
+
+        public async Task<List<CatalogTutorial>?> GetTutorial()
+        {
+            var config = await File.ReadAllTextAsync("Tutorial.json");
+            var items = JsonConvert.DeserializeObject<List<CatalogTutorial>>(config);
+
+            return items;
+        }
+
         public async Task<HomeItems?> GetHomePageInfo()
         {
             var config = await File.ReadAllTextAsync("HomePage.json");
